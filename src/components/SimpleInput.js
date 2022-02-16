@@ -44,7 +44,7 @@ const SimpleInput = (props) => {
       
 
   }
-  
+
   const setCurrentClass = nameInputHasError ? 'form-control invalid' : 'form-control' ;
   const setClassemail = EmailInputHasError ? 'form-control invalid' : 'form-control' ;
 
@@ -62,7 +62,14 @@ const SimpleInput = (props) => {
     <form onSubmit={onSupmitHandler}>
 
       <div className={setCurrentClass}>
-        <label htmlFor='name'>Your Name</label>
+        
+        <label htmlFor='name'>First Name</label>
+        <input onBlur={nameBlurHandler}
+         ref={nameInputRef} type='text' id='name' 
+         onChange={nameChangeHandler}
+          value={enteredName} />
+        {nameInputHasError && <p className="error-text">You Must Fill The input</p>}
+        <label htmlFor='name'>First Name</label>
         <input onBlur={nameBlurHandler}
          ref={nameInputRef} type='text' id='name' 
          onChange={nameChangeHandler}

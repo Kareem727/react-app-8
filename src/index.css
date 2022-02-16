@@ -24,6 +24,7 @@ body {
 
 .form-control {
   margin-bottom: 1rem;
+  display: inline-block;
 }
 
 .form-control input,
